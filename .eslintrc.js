@@ -1,3 +1,4 @@
+// npm i eslint babel-eslint prettier eslint-config-prettier eslint-plugin-prettier
 module.exports = {
   env: {
     browser: true,
@@ -6,6 +7,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'prettier',
+    'prettier/react',
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,9 +24,11 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prettier',
     'react-hooks'
   ],
   rules: {
+    'prettier/prettier': 'error',
     'react/jsx-one-expression-per-line': 0,
     'react/jsx-filename-extension': 0,
     "react-hooks/rules-of-hooks": "error",
